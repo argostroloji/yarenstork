@@ -295,7 +295,11 @@ $YAREN — The Loyalty Token
 
 // Copy CA from top bar
 function copyCA() {
-  const ca = 'BB6zcioErTWyYioBXJASkVHLqVnMNdGpZxhH7cp1pump';
+  const ca = document.getElementById('caText').textContent;
+  if (ca === 'Coming Soon...') {
+    showToast('Contract address coming soon! 🕊️');
+    return;
+  }
   navigator.clipboard.writeText(ca).then(() => {
     const icon = document.getElementById('caCopyIcon');
     const msg = document.getElementById('caCopiedMsg');
