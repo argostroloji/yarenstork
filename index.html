@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YAREN — The Stork That Chose Friendship</title>
+  <meta name="description"
+    content="Every year, a white stork named Yaren flies 10,000 km from Africa to sit on an old Turkish fisherman's boat. 15 years of pure loyalty. This is their story.">
+  <meta property="og:title" content="YAREN — The Stork That Chose Friendship">
+  <meta property="og:description"
+    content="A stork that flies 10,000 km every year to sit on an old fisherman's boat. 15 years of loyalty. The most beautiful friendship in nature.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YAREN — A 15-Year Friendship Between a Stork and a Fisherman">
+  <meta name="twitter:description"
+    content="She flies 10,000 km every year from Africa. Not for food. Not for shelter. Just for him. 🕊️">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕊️</text></svg>">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-stork">🕊️</div>
+    <div class="loader-text">YAREN</div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-content">
+      <a href="#" class="nav-logo">
+        <span>🕊️</span> YAREN
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#story" onclick="closeMenu()">Story</a></li>
+        <li><a href="#tracker" onclick="closeMenu()">Tracker</a></li>
+        <li><a href="#timeline" onclick="closeMenu()">Timeline</a></li>
+        <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+        <li><a href="#press" onclick="closeMenu()">Press</a></li>
+        <li><a href="#facts" onclick="closeMenu()">Facts</a></li>
+        <li><a href="#token" onclick="closeMenu()">$YAREN</a></li>
+        <li><a href="#community" onclick="closeMenu()">Community</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO — Full-screen iconic photo -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-image">
+      <img src="https://static.bianet.org/haber/2025/03/15/yaren-leylek-geldi-bahar-simdi-geldi-iste.jpg"
+        alt="Yaren and Adem on the boat at sunset" id="heroImg">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-bg-art">
+      <div class="hero-stars" id="heroStars"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        15 YEARS OF LOYALTY — Since 2010
+      </div>
+      <h1>YAREN</h1>
+      <p class="hero-subtitle">The Stork That Chose Friendship</p>
+      <p class="hero-tagline">
+        Every year, she flies 10,000 km from Africa — not for food, not for shelter —
+        just to sit on an old Turkish fisherman's boat. For 15 years. 💛
+      </p>
+      <div class="hero-buttons">
+        <a href="#story" class="btn-primary">📖 Discover Their Story</a>
+        <a href="#gallery" class="btn-secondary">📸 See the Photos</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- YAREN TRACKER -->
+  <section class="tracker-section section" id="tracker">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">🛰️ Live Migration Tracker</div>
+        <h2 class="section-title">Where Is <span class="gradient-text">Yaren?</span></h2>
+        <p class="section-desc">
+          Tracking her 10,000 km journey from Africa to Bursa. Updated with vibes, not GPS.
+        </p>
+      </div>
+
+      <!-- STATUS DASHBOARD -->
+      <div class="tracker-dashboard reveal">
+        <div class="tracker-status-bar">
+          <div class="tracker-status-item">
+            <span class="tracker-status-dot live"></span>
+            <span>MIGRATION STATUS: <strong>EN ROUTE</strong></span>
+          </div>
+          <div class="tracker-status-item">
+            <span>🕊️ Confidence Level: <strong class="gradient-text">EXTREMELY HIGH</strong></span>
+          </div>
+          <div class="tracker-status-item">
+            <span>📡 Source: <strong>Community Intel + Vibes</strong></span>
+          </div>
+        </div>
+
+        <!-- ARRIVAL WINDOW -->
+        <div class="tracker-cards">
+          <div class="tracker-card arrival-card">
+            <div class="arrival-header">
+              <div class="arrival-icon">🎯</div>
+              <div>
+                <div class="arrival-label">EXPECTED ARRIVAL WINDOW</div>
+                <div class="arrival-date">March 1 — 15, 2026</div>
+              </div>
+            </div>
+            <div class="arrival-zone">
+              <div class="zone-bar">
+                <div class="zone-fill" id="zoneFill"></div>
+                <div class="zone-marker" style="left: 33%">Mar 1</div>
+                <div class="zone-marker" style="left: 66%">Mar 8</div>
+                <div class="zone-marker" style="left: 90%">Mar 15</div>
+              </div>
+              <div class="zone-label">
+                <span class="zone-badge hot">🔥 HIGH PROBABILITY ZONE</span>
+                <span class="zone-info">Based on 15 years of migration data</span>
+              </div>
+            </div>
+            <div class="arrival-countdown" id="arrivalCountdown">
+              <!-- JS fills this -->
+            </div>
+          </div>
+
+          <div class="tracker-card stats-card">
+            <div class="tracker-stat">
+              <div class="tracker-stat-value">~6,200 km</div>
+              <div class="tracker-stat-label">Remaining Distance</div>
+            </div>
+            <div class="tracker-stat">
+              <div class="tracker-stat-value">15th</div>
+              <div class="tracker-stat-label">Consecutive Year</div>
+            </div>
+            <div class="tracker-stat">
+              <div class="tracker-stat-value">250+ km/day</div>
+              <div class="tracker-stat-label">Average Speed</div>
+            </div>
+            <div class="tracker-stat">
+              <div class="tracker-stat-value">Nazlı ✅</div>
+              <div class="tracker-stat-label">Already Arrived!</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MIGRATION MAP -->
+        <div class="tracker-map-container reveal">
+          <div class="map-header">
+            <h3>🗺️ Migration Route — Africa to Bursa</h3>
+            <div class="map-legend">
+              <span class="legend-dot completed"></span> Completed
+              <span class="legend-dot current"></span> Current
+              <span class="legend-dot upcoming"></span> Upcoming
+            </div>
+          </div>
+          <div class="map-widget" id="mapWidget">
+            <svg viewBox="0 0 800 500" class="migration-map">
+              <!-- Simplified world map outline -->
+              <path class="map-land"
+                d="M350,80 L380,75 L420,80 L440,95 L460,90 L500,95 L520,110 L540,130 L560,125 L580,140 L590,160 L580,180 L560,190 L540,200 L520,210 L530,230 L540,260 L530,290 L510,310 L490,320 L470,310 L450,320 L430,340 L410,360 L390,370 L370,360 L360,340 L350,320 L340,300 L350,280 L360,260 L350,240 L340,220 L330,200 L320,180 L310,160 L320,140 L330,120 L340,100 Z" />
+              <!-- Europe -->
+              <path class="map-land"
+                d="M340,60 L360,50 L380,55 L400,45 L430,50 L450,60 L470,55 L490,65 L500,80 L490,95 L470,90 L450,85 L430,80 L410,75 L390,70 L370,65 L350,70 Z" />
+              <!-- Turkey -->
+              <path class="map-land map-turkey"
+                d="M470,75 L510,70 L540,75 L560,80 L570,90 L560,100 L540,105 L520,100 L500,95 L480,90 L470,80 Z" />
+              <!-- Middle East -->
+              <path class="map-land" d="M540,100 L570,95 L590,105 L600,120 L590,135 L570,140 L555,130 L545,115 Z" />
+              <!-- Nile/Egypt -->
+              <path class="map-land" d="M510,130 L530,125 L540,140 L535,160 L525,180 L515,170 L510,150 Z" />
+
+              <!-- Migration Route -->
+              <path class="route-path"
+                d="M420,380 C430,350 440,320 450,290 C460,260 480,230 500,200 C510,180 520,160 530,140 C535,125 530,110 520,100 L510,90" />
+              <path class="route-path-glow"
+                d="M420,380 C430,350 440,320 450,290 C460,260 480,230 500,200 C510,180 520,160 530,140 C535,125 530,110 520,100 L510,90" />
+
+              <!-- Waypoints -->
+              <g class="waypoint completed" data-info="🏠 South Africa — Winter home. Chilling with the squad."
+                onclick="showWaypoint(this)">
+                <circle cx="420" cy="380" r="8" />
+                <circle cx="420" cy="380" r="12" class="waypoint-ring" />
+                <text x="432" y="385" class="waypoint-label">Start 🌴</text>
+              </g>
+
+              <g class="waypoint completed"
+                data-info="🇹🇿 Tanzania — Crossed the Serengeti. Saw some lions. Wasn't impressed."
+                onclick="showWaypoint(this)">
+                <circle cx="450" cy="290" r="8" />
+                <circle cx="450" cy="290" r="12" class="waypoint-ring" />
+                <text x="462" y="295" class="waypoint-label">Tanzania ✅</text>
+              </g>
+
+              <g class="waypoint completed"
+                data-info="🇸🇩 Sudan — Nile crossing complete. Refueled on fish. Bullish energy."
+                onclick="showWaypoint(this)">
+                <circle cx="500" cy="200" r="8" />
+                <circle cx="500" cy="200" r="12" class="waypoint-ring" />
+                <text x="512" y="205" class="waypoint-label">Sudan ✅</text>
+              </g>
+
+              <g class="waypoint current"
+                data-info="🇪🇬 Egypt — Currently vibing near the pyramids. 'Saw my reflection in the Nile, looking good.' 😎"
+                onclick="showWaypoint(this)">
+                <circle cx="530" cy="140" r="8" />
+                <circle cx="530" cy="140" r="12" class="waypoint-ring" />
+                <circle cx="530" cy="140" r="16" class="waypoint-pulse" />
+                <text x="542" y="145" class="waypoint-label">Egypt 📍 NOW</text>
+              </g>
+
+              <g class="waypoint upcoming"
+                data-info="🇸🇾 Syria/Lebanon — Next stop. Mediterranean breeze incoming. ETA: 2-3 days."
+                onclick="showWaypoint(this)">
+                <circle cx="540" cy="110" r="7" />
+                <circle cx="540" cy="110" r="11" class="waypoint-ring" />
+                <text x="552" y="115" class="waypoint-label">Syria</text>
+              </g>
+
+              <g class="waypoint upcoming"
+                data-info="🇹🇷 Southern Turkey — Almost home! Can probably smell Adem's fish from here. 🐟"
+                onclick="showWaypoint(this)">
+                <circle cx="530" cy="95" r="7" />
+                <circle cx="530" cy="95" r="11" class="waypoint-ring" />
+                <text x="542" y="100" class="waypoint-label">S. Turkey</text>
+              </g>
+
+              <g class="waypoint destination"
+                data-info="🏁 BURSA — Adem's boat is ready. Fish are fresh. Yaren's landing strip is prepped. LFG! 🚀"
+                onclick="showWaypoint(this)">
+                <circle cx="510" cy="85" r="10" />
+                <circle cx="510" cy="85" r="15" class="waypoint-ring" />
+                <circle cx="510" cy="85" r="20" class="waypoint-pulse" />
+                <text x="490" y="75" class="waypoint-label destination-label">🏁 BURSA</text>
+              </g>
+
+              <!-- Yaren icon on current position -->
+              <text x="518" y="147" class="yaren-icon">🕊️</text>
+            </svg>
+
+            <!-- Info Popup -->
+            <div class="map-info-popup" id="mapInfoPopup">
+              <div class="map-info-text" id="mapInfoText"></div>
+              <button class="map-info-close" onclick="closeMapInfo()">✕</button>
+            </div>
+          </div>
+
+          <div class="map-footer">
+            <div class="map-footer-item">⚠️ Not actual GPS data — based on historical migration patterns + community
+              vibes</div>
+            <div class="map-footer-item">🔄 Last updated: <strong>Just now (trust us bro)</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO QUOTE -->
+  <section class="quote-section section" id="intro">
+    <div class="container">
+      <div class="quote-block reveal">
+        <div class="quote-icon">❝</div>
+        <blockquote>
+          "I named her Yaren — it means 'close companion' in Turkish.
+          She's not a pet. She's not trained. She just... comes back. Every year.
+          She chooses me."
+        </blockquote>
+        <cite>— Adem Yılmaz, Fisherman from Eskikaraağaç Village</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="story section" id="story">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">The Beginning</div>
+        <h2 class="section-title">How It All <span class="gradient-text">Started</span></h2>
+      </div>
+
+      <div class="story-chapter reveal">
+        <div class="story-chapter-img">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Adem_Amca_ve_Yaren_Leylek_2020.jpg"
+            alt="Adem Amca ve Yaren Leylek 2020" loading="lazy">
+          <div class="img-caption">Adem Amca ve Yaren — Lake Uluabat, Bursa (2020)</div>
+        </div>
+        <div class="story-chapter-text">
+          <h3>A Stork, A Fisherman, A Lake</h3>
+          <p>
+            In the small village of <strong>Eskikaraağaç</strong>, on the misty shores of <strong>Lake Uluabat</strong>
+            in Bursa, Turkey, lives an elderly fisherman named <strong>Adem Yılmaz</strong>. Every morning before dawn,
+            he rows his small green boat out onto the lake, casts his nets, and waits.
+          </p>
+          <p>
+            But Adem is never alone. Since <strong>2010</strong>, a white stork has been landing on the bow of his boat
+            every spring. He named her <strong>Yaren</strong> — Turkish for "close companion" or "soulmate."
+          </p>
+          <p>
+            She arrives like clockwork every March, after flying <strong>over 10,000 kilometers</strong> from Africa.
+            She doesn't stop at any other boat. She doesn't visit any other fisherman. She comes to Adem. Only Adem.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-chapter reverse reveal">
+        <div class="story-chapter-img">
+          <img src="https://cdn.listelist.com/wp-content/uploads/2019/03/yaren-leylek-adem-amca-listelist.jpg"
+            alt="Adem and Yaren close up" loading="lazy">
+          <div class="img-caption">Adem amca ve Yaren — her sabah tekrar eden sevgi ritüeli</div>
+        </div>
+        <div class="story-chapter-text">
+          <h3>The Morning Ritual ☀️</h3>
+          <p>
+            Every morning, the routine is the same: Adem waves when he sees Yaren approaching. She lands on the
+            boat. He offers her fresh fish from his catch. They go fishing together — the fisherman and his stork,
+            side by side on the quiet waters.
+          </p>
+          <p>
+            "She eats from my hand," Adem says, eyes glistening. "When she's here, I feel complete.
+            When she leaves in autumn... I count the days until March."
+          </p>
+          <p>
+            The villagers say Adem has <strong>changed since Yaren came into his life</strong>. He smiles more.
+            He talks about her like she's family. Because to him, she is.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-chapter reveal">
+        <div class="story-chapter-img">
+          <img src="https://i.artigercek.com/2/1280/720/storage/old/news/315568.jpg" alt="Yaren and Adem iconic photo"
+            loading="lazy">
+          <div class="img-caption">Dünyaya yayılan ikonik fotoğraf — Alper Tüydeş</div>
+        </div>
+        <div class="story-chapter-text">
+          <h3>The Photographer Who Told the World 📸</h3>
+          <p>
+            In <strong>2016</strong>, wildlife photographer <strong>Alper Tüydeş</strong> visited the village and
+            captured their bond on camera. The images went viral across Turkey — and then the world took notice.
+          </p>
+          <p>
+            A full-length documentary titled <strong>"Yaren"</strong> was produced in 2019. It won
+            <strong>Best Feature Documentary at the 2020 Prague Film Awards</strong>. BBC, Daily Sabah,
+            Good News Network — everyone wanted to tell this story.
+          </p>
+          <p>
+            The village embraced it: a <strong>statue of Yaren and Adem</strong> now stands in the town square.
+            <strong>Murals</strong> of the stork cover the village walls. A <strong>24/7 live camera</strong> was
+            installed on her nest. Eskikaraağaç became a member of the <strong>European Stork Villages Network</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTIONAL BREAK -->
+  <section class="parallax-break" id="parallaxBreak">
+    <div class="parallax-img">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Adem_Amca_ve_Yaren_Leylek_2020.jpg"
+        alt="Adem Amca ve Yaren Leylek" loading="lazy">
+    </div>
+    <div class="parallax-overlay"></div>
+    <div class="parallax-content reveal">
+      <h2>She Doesn't Need a Reason to Come Back.</h2>
+      <p>No contract. No cage. No training. Just 15 years of choosing each other.</p>
+    </div>
+  </section>
+
+  <!-- ADEM'S WORDS -->
+  <section class="adem-quotes-section section" id="ademQuotes">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">❤️ In His Own Words</div>
+        <h2 class="section-title">Adem Amca <span class="gradient-text">Speaks</span></h2>
+        <p class="section-desc">
+          The fisherman who has been waiting for Yaren for 15 years — in his own words.
+        </p>
+      </div>
+
+      <div class="quotes-carousel reveal" id="quotesCarousel">
+        <div class="quotes-track" id="quotesTrack">
+          <div class="quote-slide active">
+            <div class="quote-marks">“</div>
+            <p class="quote-text">Yaren is like a child to me. Every morning I feed her with fish, then she returns to
+              the nest to take care of her chicks. If she's hungry, she always comes back to my boat.</p>
+            <div class="quote-meta">
+              <span class="quote-dash">—</span>
+              <span>Adem Yılmaz, Hispanatolia Interview</span>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="quote-marks">“</div>
+            <p class="quote-text">I worry about her for six months when she is gone. I wonder if she's okay, where she's
+              gone, and if she'll come back. When I finally see her, I'm overwhelmed with pure happiness.</p>
+            <div class="quote-meta">
+              <span class="quote-dash">—</span>
+              <span>Adem Yılmaz, Caspian Post</span>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="quote-marks">“</div>
+            <p class="quote-text">Yaren usually arrives at the beginning of the month. When she didn't show up, I feared
+              something had happened. I spent a week in sorrow. But she finally returned... We'll be together until
+              August.</p>
+            <div class="quote-meta">
+              <span class="quote-dash">—</span>
+              <span>Adem Yılmaz, Good News Network</span>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="quote-marks">“</div>
+            <p class="quote-text">If even I get this nervous when I get on a plane, who knows what difficulties and
+              troubles Yaren must experience while travelling these incredible distances every year.</p>
+            <div class="quote-meta">
+              <span class="quote-dash">—</span>
+              <span>Adem Yılmaz, Prague Film Awards Speech 🏆</span>
+            </div>
+          </div>
+          <div class="quote-slide">
+            <div class="quote-marks">“</div>
+            <p class="quote-text">I named her Yaren — it means 'close companion' in Turkish. She's not a pet. She's not
+              trained. She just... comes back. Every year. She chooses me.</p>
+            <div class="quote-meta">
+              <span class="quote-dash">—</span>
+              <span>Adem Yılmaz, Türkiye Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="quotes-nav">
+          <button class="quotes-btn" onclick="prevQuote()">←</button>
+          <div class="quotes-dots" id="quotesDots"></div>
+          <button class="quotes-btn" onclick="nextQuote()">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline-section section" id="timeline">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Year by Year</div>
+        <h2 class="section-title">15 Years of <span class="gradient-text">Loyalty</span></h2>
+        <p class="section-desc">
+          Every chapter of Yaren's incredible journey — from first landing to global icon.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">🛬</div>
+            <div class="timeline-year">2010</div>
+            <div class="timeline-title">First Landing</div>
+            <div class="timeline-desc">A white stork lands on Adem's boat for the first time. He shares his fish. She
+              stays all morning. No one knows she'll come back…</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">💛</div>
+            <div class="timeline-year">2011–2015</div>
+            <div class="timeline-title">"Yaren" is Born</div>
+            <div class="timeline-desc">She returns every March. Adem names her "Yaren" — meaning close companion. The
+              village starts watching. A tradition is born.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">📸</div>
+            <div class="timeline-year">2016</div>
+            <div class="timeline-title">The Photos Go Viral</div>
+            <div class="timeline-desc">Photographer Alper Tüydeş captures their bond. The images spread across Turkey
+              and the world falls in love.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">🎬</div>
+            <div class="timeline-year">2019</div>
+            <div class="timeline-title">The Documentary</div>
+            <div class="timeline-desc">"Yaren" — a full-length documentary film — tells their story to the world. It
+              captures both the beauty and the fragility of their bond.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">🏆</div>
+            <div class="timeline-year">2020</div>
+            <div class="timeline-title">Prague Film Award</div>
+            <div class="timeline-desc">The documentary wins Best Feature Documentary at the Prague Film Awards. Yaren
+              becomes an international symbol of loyalty.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">📹</div>
+            <div class="timeline-year">2022</div>
+            <div class="timeline-title">Live Cam on Nest</div>
+            <div class="timeline-desc">The municipality installs a 24/7 live camera on Yaren's nest. Thousands watch her
+              raise her chicks at yarenleylek.com.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">💕</div>
+            <div class="timeline-year">2023</div>
+            <div class="timeline-title">She Brings Her Partner</div>
+            <div class="timeline-desc">Yaren starts bringing her stork partner "Nazlı" to Adem's boat. The fisherman now
+              has two stork friends. Even love is shared.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">🛰️</div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-title">Satellite Tracking</div>
+            <div class="timeline-desc">Four of Yaren's chicks are tagged with satellite transmitters. Scientists can now
+              trace her family's migration routes across continents.</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-emoji">🌍</div>
+            <div class="timeline-year">2026</div>
+            <div class="timeline-title">15th Year — A Movement Begins</div>
+            <div class="timeline-desc">The 15th anniversary! Nazlı has arrived in the village. Yaren is expected
+              mid-March. And now, her story goes global — as $YAREN.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Photo Gallery</div>
+        <h2 class="section-title">Moments That <span class="gradient-text">Melt Hearts</span></h2>
+        <p class="section-desc">
+          Real photos of Yaren and Adem — 15 years of friendship captured on camera.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item-large reveal" onclick="openLightbox(this)">
+          <img src="https://static.bianet.org/haber/2025/03/15/yaren-leylek-geldi-bahar-simdi-geldi-iste.jpg"
+            alt="Yaren leylek geldi" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yaren geldi, Bahar geldi — 2025 karşılama anı 🤗</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Adem_Amca_ve_Yaren_Leylek_2020.jpg"
+            alt="Adem Amca ve Yaren Leylek 2020" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Adem Amca ve Yaren — Wikipedia'ya kadar ulaşan dostluk 💛</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="https://www.rudaw.net/s3/rudaw.net/ContentFiles/858088Image1.jpg?version=7481341"
+            alt="Yaren ve Adem Rudaw" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Dünya medyasına yansıyan o an 🌍</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-item-large reveal" onclick="openLightbox(this)">
+          <img src="https://cdn.listelist.com/wp-content/uploads/2019/03/yaren-leylek-adem-amca-listelist.jpg"
+            alt="Yaren ve Adem yakın çekim" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yakın çekim — Adem amca ve Yaren'in özel anı 📸</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJoKSrNh6D8S49AF3wu4880ULLBTKB4PPjw&s"
+            alt="Yaren Leylek" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yaren — en sadık göçmen 🦩</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img
+            src="https://static.birgun.net/resim/haber-detay-resim/2021/09/06/yaren-leylek-11-inci-kez-turkiye-den-goc-etti-918385-5.jpg"
+            alt="Yaren leylek göç" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yaren göç ediyor — Mart'ta yine gelecek 🌍✈️</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2008000/yaren-leylek-aa-2008307.jpg"
+            alt="Yaren leylek TRT" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">TRT Haber'e konu olan ikonik kare 📺</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-item-large reveal" onclick="openLightbox(this)">
+          <img src="https://www.diken.com.tr/wp-content/uploads/2023/05/20230523-yaren-leylek-aa.jpg"
+            alt="Yaren yavrularını büyütüyor" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yaren yavrularını Adem amcanın yanında büyütüyor 👶🕊️</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal" onclick="openLightbox(this)">
+          <img src="https://cdnarchive.gunes.com/Documents/Gunes/images/2022/03/08/yaren-leylek-yuvada-172_2-41.jpg"
+            alt="Yaren yuvada" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Yaren yuvada — yaşam döngüsü devam ediyor 🪺</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTARY -->
+  <section class="documentary-section section" id="documentary">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">🎬 Watch The Story</div>
+        <h2 class="section-title">The <span class="gradient-text">Documentary</span></h2>
+        <p class="section-desc">
+          Yaren's story inspired an award-winning documentary and a feature film. Watch and feel the magic.
+        </p>
+      </div>
+
+      <div class="documentary-grid">
+        <div class="documentary-card reveal">
+          <a href="https://www.youtube.com/watch?v=upH2636y5Ew" target="_blank" rel="noopener" class="video-link">
+            <div class="video-placeholder">
+              <img src="https://img.youtube.com/vi/upH2636y5Ew/maxresdefault.jpg" alt="YAREN Prague Film Awards" loading="lazy">
+              <div class="play-button">▶</div>
+              <div class="video-watch-label">Watch on YouTube</div>
+            </div>
+          </a>
+          <div class="documentary-info">
+            <div class="documentary-badge">🏆 Award-Winning Documentary</div>
+            <h3>YAREN — Prague Film Awards</h3>
+            <p>Winner of "Best Documentary" at the Prague Film Awards. The story that captivated audiences worldwide.</p>
+          </div>
+        </div>
+        <div class="documentary-card reveal reveal-delay-1">
+          <a href="https://www.youtube.com/watch?v=a9DRbIa6u1M" target="_blank" rel="noopener" class="video-link">
+            <div class="video-placeholder">
+              <img src="https://img.youtube.com/vi/a9DRbIa6u1M/maxresdefault.jpg" alt="Adem Amca ve Yaren Dostluk Hikayesi" loading="lazy">
+              <div class="play-button">▶</div>
+              <div class="video-watch-label">Watch on YouTube</div>
+            </div>
+          </a>
+          <div class="documentary-info">
+            <div class="documentary-badge">❤️ The Friendship Story</div>
+            <h3>Adem Amca &amp; Yaren — A Friendship Like No Other</h3>
+            <p>The heartwarming story of a Turkish fisherman and the stork who chose him. 15 years of loyalty.</p>
+          </div>
+        </div>
+      </div>    </div>
+    </div>
+  </section>
+
+  <!-- PRESS / NEWS -->
+  <section class="press-section section" id="press">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">In The News</div>
+        <h2 class="section-title">The World Is <span class="gradient-text">Watching</span></h2>
+        <p class="section-desc">
+          Yaren's story has been covered by media around the globe. Here's what they're saying.
+        </p>
+      </div>
+
+      <div class="press-grid">
+        <a href="https://en.wikipedia.org/wiki/Yaren_(stork)" target="_blank" class="press-card reveal">
+          <div class="press-card-header">
+            <div class="press-logo">🌐</div>
+            <div class="press-source">Wikipedia</div>
+            <div class="press-type">Encyclopedia</div>
+          </div>
+          <h3 class="press-title">Yaren (stork) — Full Wikipedia Article</h3>
+          <p class="press-excerpt">"Yaren is a white stork known for her annual return to fisherman Adem Yılmaz's boat
+            in Eskikaraağaç village since 2010..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://www.dailysabah.com/life/environment/yaren-the-stork-returns-to-fisherman-friend-in-turkeys-bursa-for-13th-year"
+          target="_blank" class="press-card reveal reveal-delay-1">
+          <div class="press-card-header">
+            <div class="press-logo">📰</div>
+            <div class="press-source">Daily Sabah</div>
+            <div class="press-type">News</div>
+          </div>
+          <h3 class="press-title">Yaren the stork returns to fisherman friend for 13th year</h3>
+          <p class="press-excerpt">"The white stork, named Yaren by the fisherman, arrived early this year on February
+            29th, marking her 13th consecutive visit..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://www.goodnewsnetwork.org/stork-returns-to-same-fishermans-boat-for-11-years/" target="_blank"
+          class="press-card reveal reveal-delay-2">
+          <div class="press-card-header">
+            <div class="press-logo">✨</div>
+            <div class="press-source">Good News Network</div>
+            <div class="press-type">Feel-Good</div>
+          </div>
+          <h3 class="press-title">Stork Returns to Same Fisherman's Boat for 11 Years</h3>
+          <p class="press-excerpt">"Every year the stork migrates from Africa and lands on Adem's small fishing boat.
+            Their bond has captivated the world..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://globalvoices.org/2021/04/06/yaren-the-stork-returns-to-her-friend-fisherman-in-turkey/"
+          target="_blank" class="press-card reveal">
+          <div class="press-card-header">
+            <div class="press-logo">🌍</div>
+            <div class="press-source">Global Voices</div>
+            <div class="press-type">Global</div>
+          </div>
+          <h3 class="press-title">Yaren the stork returns to her friend fisherman in Turkey</h3>
+          <p class="press-excerpt">"When Yaren returns, it signals hope and normalcy, particularly after challenging
+            times. Adem waits for her every March..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://www.hurriyetdailynews.com/yaren-the-stork-returns-to-bursa-village-for-14th-year-203785"
+          target="_blank" class="press-card reveal reveal-delay-1">
+          <div class="press-card-header">
+            <div class="press-logo">📰</div>
+            <div class="press-source">Hürriyet Daily News</div>
+            <div class="press-type">News</div>
+          </div>
+          <h3 class="press-title">Yaren the stork returns to Bursa village for 14th year</h3>
+          <p class="press-excerpt">"Local authorities announced plans to develop Eskikaraağaç into an official
+            ecotourism site following Yaren's fame..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://tr.wikipedia.org/wiki/Yaren_(leylek)" target="_blank" class="press-card reveal reveal-delay-2">
+          <div class="press-card-header">
+            <div class="press-logo">🌐</div>
+            <div class="press-source">Vikipedi</div>
+            <div class="press-type">Ansiklopedi</div>
+          </div>
+          <h3 class="press-title">Yaren (leylek) — Türkçe Vikipedi Makalesi</h3>
+          <p class="press-excerpt">"2010 yılından bu yana her yıl Afrika'dan göç ederek Bursa'nın Karacabey ilçesine
+            gelen Yaren leyleğin tam hikayesi..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇹🇷 Türkçe</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://www.bbc.com/turkce/haberler-dunya" target="_blank"
+          class="press-card press-card-highlight reveal">
+          <div class="press-card-header">
+            <div class="press-logo">🏆</div>
+            <div class="press-source">Prague Film Awards</div>
+            <div class="press-type">Award</div>
+          </div>
+          <h3 class="press-title">"Yaren" Wins Best Feature Documentary — 2020</h3>
+          <p class="press-excerpt">"The documentary about the extraordinary friendship between a stork and a fisherman
+            won the top documentary prize at the Prague Film Awards."</p>
+          <div class="press-footer">
+            <span class="press-lang">🏆 International Award</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+
+        <a href="https://www.turkiyetoday.com/environment/yaren-the-stork-returns-31741/" target="_blank"
+          class="press-card reveal reveal-delay-1">
+          <div class="press-card-header">
+            <div class="press-logo">📰</div>
+            <div class="press-source">Türkiye Today</div>
+            <div class="press-type">News</div>
+          </div>
+          <h3 class="press-title">Yaren the stork's chicks fitted with satellite transmitters</h3>
+          <p class="press-excerpt">"All four of Yaren's chicks were successfully monitored, tagged, and two were fitted
+            with satellite transmitters by wildlife officials..."</p>
+          <div class="press-footer">
+            <span class="press-lang">🇬🇧 English</span>
+            <span class="press-arrow">→</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img src="" alt="" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- FUN FACTS -->
+  <section class="facts-section section" id="facts">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">By the Numbers</div>
+        <h2 class="section-title">Mind-Blowing <span class="gradient-text">Facts</span></h2>
+      </div>
+
+      <div class="facts-grid">
+        <div class="fact-card reveal">
+          <span class="fact-icon">✈️</span>
+          <div class="fact-value">150,000+</div>
+          <div class="fact-label">Total km flown to visit Adem over 15 years</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-1">
+          <span class="fact-icon">🐟</span>
+          <div class="fact-value">∞</div>
+          <div class="fact-label">Fish shared between the two friends</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-2">
+          <span class="fact-icon">🌍</span>
+          <div class="fact-value">2</div>
+          <div class="fact-label">Continents — Africa to Europe, every year</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-3">
+          <span class="fact-icon">🏆</span>
+          <div class="fact-value">1</div>
+          <div class="fact-label">Award-winning documentary (Prague 2020)</div>
+        </div>
+        <div class="fact-card reveal">
+          <span class="fact-icon">👶</span>
+          <div class="fact-value">4</div>
+          <div class="fact-label">Chicks tracked with satellite in 2025</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-1">
+          <span class="fact-icon">💕</span>
+          <div class="fact-value">Nazlı</div>
+          <div class="fact-label">Yaren's partner who now also visits Adem</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-2">
+          <span class="fact-icon">🗿</span>
+          <div class="fact-value">ICONIC</div>
+          <div class="fact-label">A statue & murals in the village for them</div>
+        </div>
+        <div class="fact-card reveal reveal-delay-3">
+          <span class="fact-icon">📹</span>
+          <div class="fact-value">24/7</div>
+          <div class="fact-label">Live nest cam at yarenleylek.com</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY YAREN — Emotional bridge to token -->
+  <section class="why-section section" id="why">
+    <div class="container">
+      <div class="why-content reveal">
+        <h2>Why Does This <span class="gradient-text">Matter?</span></h2>
+        <p class="why-text">
+          In a world of broken promises and short attention spans, Yaren is a reminder that
+          <strong>loyalty still exists</strong>. Not because of a contract. Not because of obligation.
+          But because of something pure — something we've almost forgotten.
+        </p>
+        <p class="why-text">
+          Adem didn't ask Yaren to come back. She just does. Every year, across 10,000 km of sky,
+          over deserts and seas, she finds her way to his small green boat on a quiet Turkish lake.
+        </p>
+        <p class="why-text highlight-text">
+          If a stork can be this loyal, what's our excuse? 🕊️
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOKEN SECTION — Softer, story-connected -->
+  <section class="token-section section" id="token">
+    <div class="container">
+      <div class="token-hero reveal">
+        <div class="token-logo">🕊️</div>
+        <div class="token-name">$YAREN</div>
+        <div class="token-ticker">THE LOYALTY TOKEN</div>
+        <p class="token-desc">
+          Yaren's story deserves to be heard by the world. $YAREN is a community-driven movement
+          to spread the most heartwarming friendship in nature — and maybe remind people what loyalty really means.
+        </p>
+
+        <div class="token-features">
+          <div class="token-feature reveal">
+            <div class="token-feature-icon">📖</div>
+            <div class="token-feature-title">Story-Driven</div>
+            <div class="token-feature-desc">Built on a real, documented, award-winning story. Not a random meme.</div>
+          </div>
+          <div class="token-feature reveal reveal-delay-1">
+            <div class="token-feature-icon">⏰</div>
+            <div class="token-feature-title">Perfect Timing</div>
+            <div class="token-feature-desc">15th anniversary in March 2026. Yaren's return is imminent. We are early.
+            </div>
+          </div>
+          <div class="token-feature reveal reveal-delay-2">
+            <div class="token-feature-icon">🌍</div>
+            <div class="token-feature-title">Global Coverage</div>
+            <div class="token-feature-desc">Already featured on BBC, Daily Sabah, Good News Network and more.</div>
+          </div>
+          <div class="token-feature reveal reveal-delay-3">
+            <div class="token-feature-icon">🤝</div>
+            <div class="token-feature-title">Fair Launch</div>
+            <div class="token-feature-desc">Launched on Pumpfun. No presale, no insiders. Community first.</div>
+          </div>
+        </div>
+
+        <div class="token-cta-group">
+          <a href="#" class="btn-primary" id="buyBtn">🚀 Buy on Pumpfun</a>
+          <a href="https://dexscreener.com" target="_blank" class="btn-secondary">📊 DexScreener</a>
+        </div>
+
+        <div class="token-contract" id="contractAddress" onclick="copyContract()">
+          <span>CA: Coming Soon...</span>
+          <span class="copy-icon">📋</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community-section section" id="community">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Join the Flock</div>
+        <h2 class="section-title">Be Part of the <span class="gradient-text">Story</span></h2>
+        <p class="section-desc">
+          Follow the migration. Join the community. Share Yaren's story with the world.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <a href="#" target="_blank" class="community-card reveal">
+          <div class="community-icon">𝕏</div>
+          <div class="community-name">Twitter / X</div>
+          <div class="community-handle">@YarenOnSol</div>
+        </a>
+        <a href="#" target="_blank" class="community-card reveal reveal-delay-1">
+          <div class="community-icon">💬</div>
+          <div class="community-name">Telegram</div>
+          <div class="community-handle">t.me/YarenToken</div>
+        </a>
+        <a href="https://yarenleylek.com" target="_blank" class="community-card reveal reveal-delay-2">
+          <div class="community-icon">📹</div>
+          <div class="community-name">Live Nest Cam</div>
+          <div class="community-handle">yarenleylek.com</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>🕊️</span> YAREN
+        </div>
+        <div class="footer-links">
+          <a href="#story">Story</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#facts">Facts</a>
+          <a href="#token">Token</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          This website is a tribute to the extraordinary friendship of Yaren the stork and fisherman Adem Yılmaz.
+          $YAREN is a meme token — not financial advice. DYOR. Crypto involves risk.
+          All photos are credited to their respective owners. 🕊️
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
