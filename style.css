@@ -1,4 +1,4 @@
-/* ===== DESIGN SYSTEM ===== */
+﻿/* ===== DESIGN SYSTEM ===== */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
@@ -2973,5 +2973,86 @@ img {
 
   .press-type {
     margin-left: 0;
+  }
+}
+/* ===== CA TOP BAR ===== */
+.ca-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.15), rgba(251, 191, 36, 0.15));
+  border-bottom: 1px solid rgba(249, 115, 22, 0.3);
+  backdrop-filter: blur(20px);
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ca-top-bar:hover {
+  background: linear-gradient(90deg, rgba(249, 115, 22, 0.25), rgba(251, 191, 36, 0.25));
+}
+
+.ca-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+}
+
+.ca-label {
+  font-weight: 700;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ca-address {
+  color: var(--text-primary);
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  word-break: break-all;
+}
+
+.ca-copy-icon {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.ca-top-bar:hover .ca-copy-icon {
+  transform: scale(1.2);
+}
+
+.ca-copied-msg {
+  display: none;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 12px;
+  animation: fadeInUp 0.3s ease;
+}
+
+.ca-copied-msg.show {
+  display: inline;
+}
+
+/* Offset navbar for CA bar */
+.navbar {
+  top: 38px !important;
+}
+
+@media (max-width: 768px) {
+  .ca-address {
+    font-size: 10px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ca-top-content {
+    font-size: 11px;
   }
 }

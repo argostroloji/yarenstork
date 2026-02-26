@@ -1,4 +1,4 @@
-// ===== LOADER =====
+﻿// ===== LOADER =====
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('loader').classList.add('hide');
@@ -292,3 +292,18 @@ $YAREN — The Loyalty Token
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 `);
 
+
+// Copy CA from top bar
+function copyCA() {
+  const ca = 'BB6zcioErTWyYioBXJASkVHLqVnMNdGpZxhH7cp1pump';
+  navigator.clipboard.writeText(ca).then(() => {
+    const icon = document.getElementById('caCopyIcon');
+    const msg = document.getElementById('caCopiedMsg');
+    if (icon) icon.style.display = 'none';
+    if (msg) msg.classList.add('show');
+    setTimeout(() => {
+      if (icon) icon.style.display = '';
+      if (msg) msg.classList.remove('show');
+    }, 2000);
+  });
+}
