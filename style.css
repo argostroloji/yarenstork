@@ -161,6 +161,64 @@ img {
   font-size: 28px;
 }
 
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(249, 115, 22, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
+}
+
+.nav-logo:hover .nav-logo-img {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  transform: scale(1.1);
+}
+
+/* Hero Logo */
+.hero-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  animation: fadeInUp 1s ease 0.1s both;
+}
+
+.hero-logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(249, 115, 22, 0.5);
+  box-shadow:
+    0 0 30px rgba(249, 115, 22, 0.3),
+    0 0 60px rgba(249, 115, 22, 0.15),
+    0 0 0 8px rgba(249, 115, 22, 0.08);
+  animation: heroLogoFloat 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 40px rgba(249, 115, 22, 0.5),
+    0 0 80px rgba(249, 115, 22, 0.25),
+    0 0 0 12px rgba(249, 115, 22, 0.12);
+}
+
+@keyframes heroLogoFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .nav-links {
   display: flex;
   align-items: center;
