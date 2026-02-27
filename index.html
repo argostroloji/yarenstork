@@ -22,6 +22,15 @@
 
 <body>
 
+  <!-- CA TOP BAR -->
+  <div class="ca-top-bar" id="caTopBar" onclick="copyCA()">
+    <div class="ca-top-content">
+      <span class="ca-label">CA:</span>
+      <span class="ca-address" id="caText">0x99D90f893920bB63F520026e404b221B1670DB07</span>
+      <span class="ca-copy-icon" id="caCopyIcon">📋</span>
+      <span class="ca-copied-msg" id="caCopiedMsg">Copied!</span>
+    </div>
+  </div>
 
   <!-- LOADER -->
   <div class="loader" id="loader">
@@ -948,16 +957,20 @@
           <div class="token-feature reveal reveal-delay-3">
             <div class="token-feature-icon">🤝</div>
             <div class="token-feature-title">Fair Launch</div>
-            <div class="token-feature-desc">Launching on Clanker. No presale, no insiders. Community first.</div>
+            <div class="token-feature-desc">Launched on Clanker (Base). No presale, no insiders. Community first.</div>
           </div>
         </div>
 
         <div class="token-cta-group">
-          <span class="btn-primary" id="buyBtn" style="opacity: 0.6; cursor: default;">🚀 Coming Soon on Clanker</span>
+          <a href="https://www.clanker.world/clanker/0x99D90f893920bB63F520026e404b221B1670DB07" target="_blank"
+            class="btn-primary" id="buyBtn">🚀 Buy on Clanker</a>
+          <a href="https://dexscreener.com/base/0xb25ff21073d440dc81b712da14a205b21a8b9b5f331479270b4b7457f6297fd7"
+            target="_blank" class="btn-secondary">📊 DexScreener</a>
         </div>
 
-        <div class="token-contract" id="contractAddress">
-          <span>CA: Coming Soon...</span>
+        <div class="token-contract" id="contractAddress" onclick="copyContract()">
+          <span>CA: 0x99D90f893920bB63F520026e404b221B1670DB07</span>
+          <span class="copy-icon">📋</span>
         </div>
       </div>
     </div>
